@@ -18,9 +18,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Loading Data...");
-        progressDialog.setCancelable(false);
+//        final ProgressDialog progressDialog = new ProgressDialog(this);
+//        progressDialog.setMessage("Loading Data...");
+//        progressDialog.setCancelable(false);
 
         web_view = findViewById(R.id.web_view);
 
@@ -44,17 +44,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        web_view.setWebChromeClient(new WebChromeClient() {
-            public void onProgressChanged(WebView view, int progress) {
-
-                if (progress < 100) {
-                    progressDialog.show();
-                }
-                if (progress == 100) {
-                    progressDialog.dismiss();
-                }
-            }
-        });
+//        web_view.setWebChromeClient(new WebChromeClient() {
+//            public void onProgressChanged(WebView view, int progress) {
+//
+//                if (progress < 100) {
+//                    progressDialog.show();
+//                }
+//                if (progress == 100) {
+//                    progressDialog.dismiss();
+//                }
+//            }
+//        });
     }
 
     @Override
